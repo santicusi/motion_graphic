@@ -272,9 +272,9 @@
         }
 
         .hero h1 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Syne', sans-serif;
             font-size: clamp(2.8rem, 7vw, 5.5rem);
-            font-weight: 800;
+            font-weight: 700;
             line-height: 1.05;
             margin-bottom: 1.5rem;
             opacity: 0;
@@ -963,6 +963,113 @@
             .step-marker { width: 40px; height: 40px; min-width: 40px; font-size: 0.9rem; }
             .process-step { gap: 1.5rem; }
         }
+
+
+        /* ===== SERVICES SECTION ===== */
+
+.services {
+    padding: 100px 5%;
+    background: #0d0d0d;
+}
+
+.services-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.section-label {
+    color: #888;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.section-desc {
+    color: #aaa;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* GRID */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* CARD */
+
+.service-card {
+    background: #161616;
+    padding: 40px 30px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255,255,255,0.15);
+}
+
+/* ICON CON IMAGEN */
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon img {
+    transform: scale(1.1);
+}
+
+/* TITULOS */
+
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* TEXTO */
+
+.service-card p {
+    color: #aaa;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* TAG */
+
+.service-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff00cc, #3333ff);
+    color: #fff;
+    font-weight: 500;
+}
     </style>
 </head>
 <body>
@@ -996,12 +1103,6 @@
         <div class="hero-gradient-orb orb-2"></div>
         <div class="hero-gradient-orb orb-3"></div>
 
-        <div class="floating-img fi-1"><img src="imagen1.png" alt="Motion graphic element"></div>
-        <div class="floating-img fi-2"><img src="imagen2.png" alt="Diseño ilustración element"></div>
-        <div class="floating-img fi-3"><img src="imagen3.png" alt="Ilustración creativa element"></div>
-        <div class="floating-img fi-4"><img src="imagen4.png" alt="Motion design element"></div>
-        <div class="floating-img fi-5"><img src="imagen5.png" alt="Whiteboard animation element"></div>
-
         <div class="hero-content">
             <br><br>
             <div class="hero-badge">
@@ -1010,8 +1111,8 @@
                 Agencia Motion Graphic #1 en Creatividad
             </div>
             <h1>
-                Damos vida a tus ideas con<br>
-                <span class="gradient-text">Motion Graphics</span>
+                DAMOS VIDA A TUS IDEAS CON<br>
+                <span class="gradient-text">MOTION GRAPHICS</span>
             </h1>
             <p>Somos <strong>3frames</strong>, tu agencia de motion graphic especializada en video explicativo animado, whiteboard animation, motion design y mucho más. Creamos contenido visual que cautiva.</p>
             <div class="hero-buttons">
@@ -1049,45 +1150,79 @@
         <div class="services-header reveal">
             <div class="section-label">Nuestros Servicios</div>
             <h2 class="section-title">Todo el poder del <span class="gradient-text">Motion Graphic</span></h2>
-            <p class="section-desc">Desde la conceptualización hasta la entrega final, nuestra agencia motion graphic cubre cada aspecto de la animación y el diseño visual.</p>
+            <p class="section-desc">
+                Desde la conceptualización hasta la entrega final, nuestra agencia motion graphic cubre cada aspecto de la animación y el diseño visual.
+            </p>
         </div>
+
         <div class="services-grid">
+
             <div class="service-card reveal">
-                <div class="service-icon">🎬</div>
+                <div class="service-icon">
+                    <img src="imagen1.png" alt="Motion Graphics 2D">
+                </div>
                 <h3>Motion Graphics 2D</h3>
-                <p>Animaciones fluidas y dinámicas en motion graphics 2D que transforman información compleja en contenido visual atractivo y fácil de comprender.</p>
+                <p>
+                    Animaciones fluidas y dinámicas en motion graphics 2D que transforman información compleja en contenido visual atractivo y fácil de comprender.
+                </p>
                 <span class="service-tag">Motion Graphic</span>
             </div>
+
             <div class="service-card reveal">
-                <div class="service-icon">✏️</div>
+                <div class="service-icon">
+                    <img src="imagen2.png" alt="Whiteboard Animation">
+                </div>
                 <h3>Whiteboard Animation</h3>
-                <p>Videos de whiteboard animation que explican tu producto o servicio de manera clara y entretenida, ideales para capacitaciones y marketing.</p>
+                <p>
+                    Videos de whiteboard animation que explican tu producto o servicio de manera clara y entretenida, ideales para capacitaciones y marketing.
+                </p>
                 <span class="service-tag">Animación</span>
             </div>
+
             <div class="service-card reveal">
-                <div class="service-icon">🎥</div>
+                <div class="service-icon">
+                    <img src="imagen3.png" alt="Video Explicativo Animado">
+                </div>
                 <h3>Video Explicativo Animado</h3>
-                <p>Producimos cada video explicativo animado con narrativa estratégica para que tu audiencia entienda tu mensaje en segundos.</p>
+                <p>
+                    Producimos cada video explicativo animado con narrativa estratégica para que tu audiencia entienda tu mensaje en segundos.
+                </p>
                 <span class="service-tag">Video</span>
             </div>
+
             <div class="service-card reveal">
-                <div class="service-icon">🎨</div>
+                <div class="service-icon">
+                    <img src="imagen4.png" alt="Ilustración Creativa">
+                </div>
                 <h3>Ilustración Creativa</h3>
-                <p>Nuestro equipo de ilustradores gráficos crea piezas de ilustración creativa únicas que refuerzan la identidad visual de tu marca.</p>
+                <p>
+                    Nuestro equipo de ilustradores gráficos crea piezas de ilustración creativa únicas que refuerzan la identidad visual de tu marca.
+                </p>
                 <span class="service-tag">Ilustración</span>
             </div>
+
             <div class="service-card reveal">
-                <div class="service-icon">⚡</div>
+                <div class="service-icon">
+                    <img src="imagen5.png" alt="Motion Graphics en After Effects">
+                </div>
                 <h3>Motion Graphics en After Effects</h3>
-                <p>Dominamos motion graphics en After Effects para crear animaciones de alta calidad con efectos visuales que impactan y generan recordación.</p>
+                <p>
+                    Dominamos motion graphics en After Effects para crear animaciones de alta calidad con efectos visuales que impactan y generan recordación.
+                </p>
                 <span class="service-tag">After Effects</span>
             </div>
+
             <div class="service-card reveal">
-                <div class="service-icon">🖌️</div>
+                <div class="service-icon">
+                    <img src="imagen6.png" alt="Diseño Ilustración & Motion Design">
+                </div>
                 <h3>Diseño Ilustración & Motion Design</h3>
-                <p>Combinamos diseño ilustración con motion design para entregar piezas visuales completas, desde Photoshop e Ilustrador hasta la animación final.</p>
+                <p>
+                    Combinamos diseño ilustración con motion design para entregar piezas visuales completas, desde Photoshop e Ilustrador hasta la animación final.
+                </p>
                 <span class="service-tag">Diseño</span>
             </div>
+
         </div>
     </section>
 
@@ -1108,24 +1243,6 @@
             </div>
             <div class="portfolio-image">
                 <img src="imagen1.jpg" alt="Motion graphic - Video explicativo animado, whiteboard animation y motion design por 3frames">
-            </div>
-        </div>
-        <div class="stats-strip reveal">
-            <div class="stat-item">
-                <div class="stat-number" data-target="350">0</div>
-                <div class="stat-label">Proyectos Entregados</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="120">0</div>
-                <div class="stat-label">Clientes Satisfechos</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="15">0</div>
-                <div class="stat-label">Premios & Reconocimientos</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="8">0</div>
-                <div class="stat-label">Años de Experiencia</div>
             </div>
         </div>
     </section>
@@ -1164,50 +1281,6 @@
                 <div class="step-content">
                     <h3>Animación & Entrega</h3>
                     <p>Damos vida a todo con motion graphics en After Effects. Animamos en motion graphics 2D o whiteboard animation según tu proyecto, con revisiones ilimitadas.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section testimonials" id="testimonios">
-        <div class="testimonials-header reveal">
-            <div class="section-label">Testimonios</div>
-            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
-            <p class="section-desc">Marcas que confiaron en nuestra agencia motion graphic para llevar su comunicación visual al siguiente nivel.</p>
-        </div>
-        <div class="testimonial-cards">
-            <div class="testimonial-card reveal">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"El video explicativo animado que creó 3frames superó todas nuestras expectativas. El motion design es impecable y nuestras conversiones aumentaron un 40%."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">MC</div>
-                    <div>
-                        <div class="author-name">María Castillo</div>
-                        <div class="author-role">Directora de Marketing, TechFlow</div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card reveal">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"La ilustración creativa y los motion graphics 2D que desarrollaron para nuestra campaña fueron espectaculares. Verdaderos artistas del diseño ilustración."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">AR</div>
-                    <div>
-                        <div class="author-name">Andrés Reyes</div>
-                        <div class="author-role">CEO, StartupLab</div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card reveal">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Necesitábamos una whiteboard animation profesional y 3frames lo entregó perfecto. Su dominio de motion graphics en After Effects es de otro nivel."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">LP</div>
-                    <div>
-                        <div class="author-name">Laura Pérez</div>
-                        <div class="author-role">Head of Content, EduPlus</div>
-                    </div>
                 </div>
             </div>
         </div>
