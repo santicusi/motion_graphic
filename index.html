@@ -99,7 +99,6 @@
             -webkit-text-fill-color: transparent;
             letter-spacing: -1px;
         }
-        .logo span { font-weight: 400; opacity: 0.7; }
         .nav-links {
             display: flex;
             gap: 2.5rem;
@@ -123,7 +122,6 @@
         }
         .nav-links a:hover::after { width: 100%; }
         .nav-links a:hover { color: var(--cyan); }
-
         .nav-cta {
             background: linear-gradient(135deg, var(--magenta), var(--violet));
             color: white !important;
@@ -137,7 +135,6 @@
             transform: scale(1.05);
             box-shadow: 0 0 30px rgba(255, 45, 120, 0.4);
         }
-
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -161,7 +158,6 @@
             overflow: hidden;
             padding: 2rem;
         }
-
         .hero-bg-grid {
             position: absolute;
             inset: 0;
@@ -175,7 +171,6 @@
             0% { transform: translate(0, 0); }
             100% { transform: translate(60px, 60px); }
         }
-
         .hero-gradient-orb {
             position: absolute;
             border-radius: 50%;
@@ -183,68 +178,19 @@
             opacity: 0.4;
             animation: orbFloat 8s ease-in-out infinite alternate;
         }
-        .orb-1 {
-            width: 500px; height: 500px;
-            background: var(--magenta);
-            top: -10%; left: -5%;
-            animation-delay: 0s;
-        }
-        .orb-2 {
-            width: 400px; height: 400px;
-            background: var(--cyan);
-            bottom: -10%; right: -5%;
-            animation-delay: -3s;
-        }
-        .orb-3 {
-            width: 350px; height: 350px;
-            background: var(--violet);
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            animation-delay: -5s;
-        }
+        .orb-1 { width: 500px; height: 500px; background: var(--magenta); top: -10%; left: -5%; }
+        .orb-2 { width: 400px; height: 400px; background: var(--cyan); bottom: -10%; right: -5%; animation-delay: -3s; }
+        .orb-3 { width: 350px; height: 350px; background: var(--violet); top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: -5s; }
         @keyframes orbFloat {
             0% { transform: translate(0, 0) scale(1); }
             100% { transform: translate(40px, -30px) scale(1.15); }
         }
-
-        /* Floating images */
-        .floating-img {
-            position: absolute;
-            pointer-events: none;
-            opacity: 0.6;
-            transition: transform 0.3s;
-        }
-        .floating-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        .fi-1 { width: 120px; top: 15%; left: 8%; animation: floatA 6s ease-in-out infinite; }
-        .fi-2 { width: 100px; top: 20%; right: 10%; animation: floatB 7s ease-in-out infinite; }
-        .fi-3 { width: 140px; bottom: 15%; left: 12%; animation: floatC 8s ease-in-out infinite; }
-        .fi-4 { width: 90px; bottom: 25%; right: 8%; animation: floatA 5s ease-in-out infinite reverse; }
-        .fi-5 { width: 110px; top: 60%; left: 3%; animation: floatB 9s ease-in-out infinite; }
-
-        @keyframes floatA {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-25px) rotate(5deg); }
-        }
-        @keyframes floatB {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(20px) rotate(-5deg); }
-        }
-        @keyframes floatC {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(15px, -20px) rotate(3deg); }
-        }
-
         .hero-content {
             text-align: center;
             position: relative;
             z-index: 10;
             max-width: 900px;
         }
-
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -270,7 +216,6 @@
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: 0.5; transform: scale(1.3); }
         }
-
         .hero h1 {
             font-family: 'Syne', sans-serif;
             font-size: clamp(2.8rem, 7vw, 5.5rem);
@@ -292,17 +237,25 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
-        .hero p {
+        .hero-subtitle {
             font-size: 1.2rem;
-            color: rgba(240, 240, 255, 0.7);
+            color: rgba(240, 240, 255, 0.75);
+            max-width: 620px;
+            margin: 0 auto 1rem;
+            line-height: 1.7;
+            font-weight: 500;
+            opacity: 0;
+            animation: fadeInUp 0.8s 0.5s forwards;
+        }
+        .hero p {
+            font-size: 1.05rem;
+            color: rgba(240, 240, 255, 0.55);
             max-width: 600px;
             margin: 0 auto 2.5rem;
             line-height: 1.7;
             opacity: 0;
             animation: fadeInUp 0.8s 0.6s forwards;
         }
-
         .hero-buttons {
             display: flex;
             gap: 1rem;
@@ -311,7 +264,6 @@
             opacity: 0;
             animation: fadeInUp 0.8s 0.8s forwards;
         }
-
         .btn-primary {
             background: linear-gradient(135deg, var(--magenta), var(--violet));
             color: white;
@@ -343,7 +295,6 @@
         }
         .btn-primary:hover::before { opacity: 1; }
         .btn-primary span { position: relative; z-index: 1; }
-
         .btn-secondary {
             background: transparent;
             color: var(--light);
@@ -365,13 +316,12 @@
             background: rgba(0, 229, 255, 0.05);
             transform: translateY(-3px);
         }
-
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Scrolling Ticker */
+        /* Ticker */
         .ticker {
             overflow: hidden;
             background: linear-gradient(90deg, var(--magenta), var(--violet), var(--cyan), var(--lime), var(--orange));
@@ -405,12 +355,8 @@
             100% { transform: translateX(-50%); }
         }
 
-        /* Section Styles */
-        .section {
-            padding: 6rem 3rem;
-            position: relative;
-        }
-
+        /* Section */
+        .section { padding: 6rem 3rem; position: relative; }
         .section-label {
             font-family: 'Syne', sans-serif;
             font-weight: 700;
@@ -420,7 +366,6 @@
             color: var(--cyan);
             margin-bottom: 1rem;
         }
-
         .section-title {
             font-family: 'Syne', sans-serif;
             font-size: clamp(2rem, 4vw, 3.2rem);
@@ -428,7 +373,6 @@
             line-height: 1.15;
             margin-bottom: 1.5rem;
         }
-
         .section-desc {
             font-size: 1.1rem;
             color: rgba(240, 240, 255, 0.6);
@@ -436,18 +380,105 @@
             line-height: 1.7;
         }
 
-        /* Services */
-        .services {
-            background: var(--dark-surface);
+        /* === USE CASE CARDS === */
+        .use-cases {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto 4rem;
         }
-        .services-header {
+        .use-case-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 2rem 1.8rem;
             text-align: center;
-            margin-bottom: 4rem;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
         }
-        .services-header .section-desc {
-            margin: 0 auto;
+        .use-case-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .use-case-card:nth-child(1)::before { background: linear-gradient(90deg, var(--magenta), var(--orange)); }
+        .use-case-card:nth-child(2)::before { background: linear-gradient(90deg, var(--cyan), var(--lime)); }
+        .use-case-card:nth-child(3)::before { background: linear-gradient(90deg, var(--violet), var(--magenta)); }
+        .use-case-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .use-case-card:hover::before { opacity: 1; }
+        .use-case-quote {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--light);
+            margin-bottom: 0.6rem;
+        }
+        .use-case-for {
+            font-size: 0.9rem;
+            color: rgba(240, 240, 255, 0.45);
         }
 
+        /* === PROBLEM / SOLUTION === */
+        .problem-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .problem-left blockquote {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+            font-weight: 700;
+            line-height: 1.4;
+            color: var(--light);
+            border-left: 3px solid var(--magenta);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .problem-pillars {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .pillar {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1rem 1.2rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .pillar:hover {
+            border-color: rgba(0, 229, 255, 0.3);
+            background: rgba(0, 229, 255, 0.05);
+        }
+        .problem-right p {
+            color: rgba(240, 240, 255, 0.6);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+        }
+        .problem-right .highlight { color: var(--light); font-weight: 600; }
+        .problem-right .emphasis { color: var(--cyan); font-weight: 600; }
+
+        /* Services */
+        .services { background: var(--dark-surface); }
+        .services-header { text-align: center; margin-bottom: 4rem; }
+        .services-header .section-desc { margin: 0 auto; }
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -455,7 +486,6 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .service-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.06);
@@ -482,24 +512,19 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
         .service-card:hover::before { opacity: 1; }
-
         .service-icon {
-            width: 60px; height: 60px;
-            border-radius: 16px;
+            width: 70px; height: 70px;
+            margin-bottom: 25px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            position: relative;
         }
-        .service-card:nth-child(1) .service-icon { background: rgba(255, 45, 120, 0.15); }
-        .service-card:nth-child(2) .service-icon { background: rgba(0, 229, 255, 0.15); }
-        .service-card:nth-child(3) .service-icon { background: rgba(198, 255, 0, 0.15); }
-        .service-card:nth-child(4) .service-icon { background: rgba(124, 77, 255, 0.15); }
-        .service-card:nth-child(5) .service-icon { background: rgba(255, 109, 0, 0.15); }
-        .service-card:nth-child(6) .service-icon { background: rgba(255, 214, 0, 0.15); }
-
+        .service-icon img {
+            width: 100%; height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover .service-icon img { transform: scale(1.1); }
         .service-card h3 {
             font-family: 'Syne', sans-serif;
             font-size: 1.3rem;
@@ -511,65 +536,116 @@
             line-height: 1.6;
             font-size: 0.95rem;
         }
-
         .service-tag {
             display: inline-block;
             margin-top: 1.2rem;
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
+            padding: 6px 14px;
             font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #ff00cc, #3333ff);
+            color: #fff;
+            font-weight: 500;
         }
-        .service-card:nth-child(1) .service-tag { background: rgba(255, 45, 120, 0.1); color: var(--magenta); }
-        .service-card:nth-child(2) .service-tag { background: rgba(0, 229, 255, 0.1); color: var(--cyan); }
-        .service-card:nth-child(3) .service-tag { background: rgba(198, 255, 0, 0.1); color: var(--lime); }
-        .service-card:nth-child(4) .service-tag { background: rgba(124, 77, 255, 0.1); color: var(--violet); }
-        .service-card:nth-child(5) .service-tag { background: rgba(255, 109, 0, 0.1); color: var(--orange); }
-        .service-card:nth-child(6) .service-tag { background: rgba(255, 214, 0, 0.1); color: var(--yellow); }
 
-        /* Showreel / Portfolio */
-        .showreel {
-            background: var(--dark);
-            text-align: center;
-        }
-        .showreel-header { margin-bottom: 4rem; }
+        /* Portfolio */
+        .showreel { background: var(--dark); }
+        .showreel-header { text-align: center; margin-bottom: 4rem; }
         .showreel-header .section-desc { margin: 0 auto; }
-
-        /* Stats */
-        .stats-strip {
+        .portfolio-showcase {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            max-width: 1000px;
-            margin: 4rem auto 0;
-            gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: center;
         }
-        .stat-item {
-            text-align: center;
-        }
-        .stat-number {
+        .portfolio-text h3 {
             font-family: 'Syne', sans-serif;
-            font-size: 2.8rem;
-            font-weight: 800;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
             background: linear-gradient(135deg, var(--cyan), var(--lime));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .stat-label {
-            font-size: 0.9rem;
-            color: rgba(240, 240, 255, 0.5);
-            margin-top: 0.3rem;
+        .portfolio-text p {
+            color: rgba(240, 240, 255, 0.6);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .portfolio-text strong { color: rgba(240, 240, 255, 0.85); }
+
+        /* Video Container */
+        .portfolio-video {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            cursor: pointer;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
+            background: var(--dark-surface);
+        }
+        .portfolio-video:hover {
+            transform: scale(1.02);
+            box-shadow: 0 30px 80px rgba(255, 45, 120, 0.15), 0 0 0 1px rgba(0, 229, 255, 0.2);
+        }
+        .portfolio-video video {
+            width: 100%; height: auto;
+            display: block;
+            border-radius: 20px;
+        }
+        .video-play-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(10, 10, 18, 0.5);
+            transition: all 0.4s;
+            z-index: 5;
+        }
+        .video-play-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .video-play-btn {
+            width: 80px; height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--magenta), var(--violet));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            position: relative;
+            transition: transform 0.3s;
+        }
+        .video-play-btn::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 45, 120, 0.3);
+            animation: playPulse 2s infinite;
+        }
+        @keyframes playPulse {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.4); opacity: 0; }
+        }
+        .video-play-btn svg { width: 30px; height: 30px; fill: white; margin-left: 4px; }
+        .portfolio-video:hover .video-play-btn { transform: scale(1.1); }
+        .video-play-label {
+            font-family: 'Syne', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            color: rgba(240, 240, 255, 0.8);
         }
 
         /* Process */
         .process { background: var(--dark-surface); }
-        .process-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
+        .process-header { text-align: center; margin-bottom: 4rem; }
         .process-header .section-desc { margin: 0 auto; }
-
         .process-timeline {
             max-width: 900px;
             margin: 0 auto;
@@ -580,9 +656,8 @@
             position: absolute;
             left: 30px; top: 0; bottom: 0;
             width: 2px;
-            background: linear-gradient(to bottom, var(--magenta), var(--cyan), var(--lime), var(--violet));
+            background: linear-gradient(to bottom, var(--magenta), var(--cyan), var(--lime), var(--violet), var(--orange));
         }
-
         .process-step {
             display: flex;
             gap: 2.5rem;
@@ -592,11 +667,7 @@
             transform: translateX(-30px);
             transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .process-step.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
+        .process-step.visible { opacity: 1; transform: translateX(0); }
         .step-marker {
             width: 60px; height: 60px;
             min-width: 60px;
@@ -614,7 +685,7 @@
         .process-step:nth-child(2) .step-marker { background: var(--cyan); color: var(--dark); }
         .process-step:nth-child(3) .step-marker { background: var(--lime); color: var(--dark); }
         .process-step:nth-child(4) .step-marker { background: var(--violet); color: white; }
-
+        .process-step:nth-child(5) .step-marker { background: var(--orange); color: white; }
         .step-content h3 {
             font-family: 'Syne', sans-serif;
             font-size: 1.4rem;
@@ -625,75 +696,15 @@
             color: rgba(240, 240, 255, 0.55);
             line-height: 1.7;
         }
-
-        /* Clients / Testimonials */
-        .testimonials { background: var(--dark); }
-        .testimonials-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        .testimonials-header .section-desc { margin: 0 auto; }
-
-        .testimonial-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.5rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 20px;
-            padding: 2rem;
-            transition: all 0.4s;
-        }
-        .testimonial-card:hover {
-            border-color: rgba(0, 229, 255, 0.2);
-            transform: translateY(-5px);
-        }
-
-        .testimonial-stars {
-            color: var(--yellow);
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-        .testimonial-text {
-            color: rgba(240, 240, 255, 0.7);
-            line-height: 1.7;
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
+        .step-content .step-goal {
+            color: var(--cyan);
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-top: 0.4rem;
             font-style: italic;
         }
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .author-avatar {
-            width: 44px; height: 44px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1rem;
-        }
-        .testimonial-card:nth-child(1) .author-avatar { background: rgba(255, 45, 120, 0.2); color: var(--magenta); }
-        .testimonial-card:nth-child(2) .author-avatar { background: rgba(0, 229, 255, 0.2); color: var(--cyan); }
-        .testimonial-card:nth-child(3) .author-avatar { background: rgba(198, 255, 0, 0.2); color: var(--lime); }
 
-        .author-name {
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-        .author-role {
-            font-size: 0.8rem;
-            color: rgba(240, 240, 255, 0.4);
-        }
-
-        /* CTA Section */
+        /* CTA */
         .cta-section {
             background: var(--dark-surface);
             text-align: center;
@@ -710,12 +721,7 @@
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
         }
-
-        .cta-content {
-            position: relative;
-            z-index: 2;
-        }
-
+        .cta-content { position: relative; z-index: 2; }
         .cta-title {
             font-family: 'Syne', sans-serif;
             font-size: clamp(2rem, 4.5vw, 3.5rem);
@@ -744,28 +750,12 @@
             margin: 0 auto 3rem;
         }
         .footer-brand .logo { font-size: 1.5rem; margin-bottom: 1rem; }
-        .footer-brand p {
-            color: rgba(240, 240, 255, 0.45);
-            font-size: 0.9rem;
-            line-height: 1.7;
-            max-width: 300px;
-        }
-        .footer-col h4 {
-            font-family: 'Syne', sans-serif;
-            font-weight: 700;
-            margin-bottom: 1.2rem;
-            font-size: 1rem;
-        }
+        .footer-brand p { color: rgba(240, 240, 255, 0.45); font-size: 0.9rem; line-height: 1.7; max-width: 300px; }
+        .footer-col h4 { font-family: 'Syne', sans-serif; font-weight: 700; margin-bottom: 1.2rem; font-size: 1rem; }
         .footer-col ul { list-style: none; }
         .footer-col li { margin-bottom: 0.6rem; }
-        .footer-col a {
-            color: rgba(240, 240, 255, 0.45);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
+        .footer-col a { color: rgba(240, 240, 255, 0.45); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
         .footer-col a:hover { color: var(--cyan); }
-
         .footer-bottom {
             max-width: 1200px;
             margin: 0 auto;
@@ -779,10 +769,7 @@
             flex-wrap: wrap;
             gap: 1rem;
         }
-        .footer-socials {
-            display: flex;
-            gap: 1rem;
-        }
+        .footer-socials { display: flex; gap: 1rem; }
         .footer-socials a {
             width: 38px; height: 38px;
             border-radius: 50%;
@@ -795,91 +782,21 @@
             transition: all 0.3s;
             font-size: 0.85rem;
         }
-        .footer-socials a:hover {
-            border-color: var(--magenta);
-            color: var(--magenta);
-            background: rgba(255, 45, 120, 0.1);
-        }
+        .footer-socials a:hover { border-color: var(--magenta); color: var(--magenta); background: rgba(255, 45, 120, 0.1); }
 
-        /* Scroll reveal */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        /* Reveal */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
 
-        /* Particles Canvas */
-        #particles {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        /* Magnetic buttons */
+        #particles { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
         .magnetic { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
 
-        /* Portfolio Showcase */
-        .portfolio-showcase {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            max-width: 1100px;
-            margin: 0 auto;
-            align-items: center;
-        }
-        .portfolio-text h3 {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 1.2rem;
-            background: linear-gradient(135deg, var(--cyan), var(--lime));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .portfolio-text p {
-            color: rgba(240, 240, 255, 0.6);
-            line-height: 1.8;
-            margin-bottom: 1rem;
-            font-size: 1rem;
-        }
-        .portfolio-text strong {
-            color: rgba(240, 240, 255, 0.85);
-        }
-        .portfolio-image {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
-        }
-        .portfolio-image:hover {
-            transform: scale(1.03) rotate(-1deg);
-            box-shadow: 0 30px 80px rgba(255, 45, 120, 0.15), 0 0 0 1px rgba(0, 229, 255, 0.2);
-        }
-        .portfolio-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .portfolio-showcase { grid-template-columns: 1fr; }
-            .portfolio-image { order: -1; }
-        }
-
-        /* WhatsApp Floating Button */
+        /* WhatsApp Float */
         .whatsapp-float {
             position: fixed;
-            bottom: 28px;
-            right: 28px;
+            bottom: 28px; right: 28px;
             z-index: 9999;
-            width: 62px;
-            height: 62px;
+            width: 62px; height: 62px;
             border-radius: 50%;
             background: #25D366;
             display: flex;
@@ -890,15 +807,8 @@
             text-decoration: none;
             animation: waFloat 3s ease-in-out infinite;
         }
-        .whatsapp-float:hover {
-            transform: scale(1.12);
-            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.6);
-        }
-        .whatsapp-float svg {
-            width: 32px;
-            height: 32px;
-            fill: white;
-        }
+        .whatsapp-float:hover { transform: scale(1.12); box-shadow: 0 8px 32px rgba(37, 211, 102, 0.6); }
+        .whatsapp-float svg { width: 32px; height: 32px; fill: white; }
         .whatsapp-float::before {
             content: '';
             position: absolute;
@@ -923,18 +833,9 @@
             transform: translateX(8px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
-        .whatsapp-float:hover .wa-tooltip {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        @keyframes waPulse {
-            0% { transform: scale(1); opacity: 0.6; }
-            100% { transform: scale(1.5); opacity: 0; }
-        }
-        @keyframes waFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
-        }
+        .whatsapp-float:hover .wa-tooltip { opacity: 1; transform: translateX(0); }
+        @keyframes waPulse { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.5); opacity: 0; } }
+        @keyframes waFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -942,148 +843,34 @@
             .nav-links { display: none; }
             .menu-toggle { display: flex; }
             .nav-links.open {
-                display: flex;
-                flex-direction: column;
-                position: fixed;
-                top: 0; left: 0; right: 0; bottom: 0;
+                display: flex; flex-direction: column;
+                position: fixed; top: 0; left: 0; right: 0; bottom: 0;
                 background: rgba(10, 10, 18, 0.98);
-                justify-content: center;
-                align-items: center;
-                z-index: 999;
-                gap: 2rem;
+                justify-content: center; align-items: center;
+                z-index: 999; gap: 2rem;
             }
             .nav-links.open a { font-size: 1.3rem; }
             .section { padding: 4rem 1.5rem; }
-            .stats-strip { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-            .stat-number { font-size: 2rem; }
             .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .floating-img { display: none; }
             .cursor-dot, .cursor-ring { display: none; }
             .process-timeline::before { left: 20px; }
             .step-marker { width: 40px; height: 40px; min-width: 40px; font-size: 0.9rem; }
             .process-step { gap: 1.5rem; }
+            .use-cases { grid-template-columns: 1fr; }
+            .problem-section { grid-template-columns: 1fr; gap: 2.5rem; }
+            .portfolio-showcase { grid-template-columns: 1fr; }
+            .portfolio-video { order: -1; }
         }
-
-
-        /* ===== SERVICES SECTION ===== */
-
-.services {
-    padding: 100px 5%;
-    background: #0d0d0d;
-}
-
-.services-header {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 60px;
-}
-
-.section-label {
-    color: #888;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
-}
-
-.section-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    margin-bottom: 1rem;
-}
-
-.section-desc {
-    color: #aaa;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* GRID */
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-/* CARD */
-
-.service-card {
-    background: #161616;
-    padding: 40px 30px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(255,255,255,0.15);
-}
-
-/* ICON CON IMAGEN */
-
-.service-icon {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.service-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover .service-icon img {
-    transform: scale(1.1);
-}
-
-/* TITULOS */
-
-.service-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: #fff;
-}
-
-/* TEXTO */
-
-.service-card p {
-    color: #aaa;
-    line-height: 1.6;
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-}
-
-/* TAG */
-
-.service-tag {
-    display: inline-block;
-    padding: 6px 14px;
-    font-size: 0.75rem;
-    border-radius: 50px;
-    background: linear-gradient(135deg, #ff00cc, #3333ff);
-    color: #fff;
-    font-weight: 500;
-}
     </style>
 </head>
 <body>
-    <!-- Custom Cursor -->
     <div class="cursor-dot" id="cursorDot"></div>
     <div class="cursor-ring" id="cursorRing"></div>
-
-    <!-- Particles -->
     <canvas id="particles"></canvas>
 
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="logo">3frames</div>
-    
         <ul class="nav-links" id="navLinks">
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#portafolio">Portafolio</a></li>
@@ -1096,28 +883,26 @@
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- ============ HERO ============ -->
     <section class="hero" id="hero">
         <div class="hero-bg-grid"></div>
         <div class="hero-gradient-orb orb-1"></div>
         <div class="hero-gradient-orb orb-2"></div>
         <div class="hero-gradient-orb orb-3"></div>
-
         <div class="hero-content">
             <br><br>
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-
                 Agencia Motion Graphic #1 en Creatividad
             </div>
             <h1>
-                DAMOS VIDA A TUS IDEAS CON<br>
-                <span class="gradient-text">MOTION GRAPHICS</span>
+                Videos explicativos que convierten ideas complejas en <br>
+                <span class="gradient-text">mensajes claros y fáciles de entender</span>
             </h1>
-            <p>Somos <strong>3frames</strong>, tu agencia de motion graphic especializada en video explicativo animado, whiteboard animation, motion design y mucho más. Creamos contenido visual que cautiva.</p>
+            <div class="hero-subtitle">Explicamos productos, procesos y servicios de forma visual para que tu mensaje se entienda rápido y genere mejores resultados.</div>
             <div class="hero-buttons">
-                <a href="https://wa.me/573134811797?text=Hola%203frames%2C%20quiero%20iniciar%20un%20proyecto" target="_blank" class="btn-primary magnetic" onclick="gtag('event', 'conversion', {'send_to': 'AW-17977375107/A_woCMmXif8bEIPzo_xC'});"><span>🚀 Iniciar Proyecto</span></a>
-                <a href="#portafolio" class="btn-secondary magnetic"><span>▶</span> Ver Portafolio</a>
+                <a href="#portafolio" class="btn-secondary magnetic"><span>▶</span> Ver ejemplo</a>
+                <a href="https://wa.me/573134811797?text=Hola%203frames%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" class="btn-primary magnetic" onclick="gtag('event', 'conversion', {'send_to': 'AW-17977375107/A_woCMmXif8bEIPzo_xC'});"><span>🚀 Cotizar proyecto</span></a>
             </div>
         </div>
     </section>
@@ -1133,7 +918,6 @@
             <div class="ticker-item">MOTION GRAPHICS EN AFTER EFFECTS <span class="sep"></span></div>
             <div class="ticker-item">DISEÑO ILUSTRACIÓN <span class="sep"></span></div>
             <div class="ticker-item">ILUSTRADOR GRÁFICO <span class="sep"></span></div>
-            <!-- Duplicate for seamless loop -->
             <div class="ticker-item">WHITEBOARD ANIMATION <span class="sep"></span></div>
             <div class="ticker-item">VIDEO EXPLICATIVO ANIMADO <span class="sep"></span></div>
             <div class="ticker-item">MOTION GRAPHICS 2D <span class="sep"></span></div>
@@ -1145,155 +929,135 @@
         </div>
     </div>
 
-    <!-- Services -->
+    <!-- ============ SERVICES ============ -->
     <section class="section services" id="servicios">
         <div class="services-header reveal">
             <div class="section-label">Nuestros Servicios</div>
-            <h2 class="section-title">Todo el poder del <span class="gradient-text">Motion Graphic</span></h2>
-            <p class="section-desc">
-                Desde la conceptualización hasta la entrega final, nuestra agencia motion graphic cubre cada aspecto de la animación y el diseño visual.
-            </p>
+            <h2 class="section-title">Si tu cliente no entiende en segundos… <span class="gradient-text">no compra.</span></h2>
+            <div class="problem-right">
+                <p>La mayoría de empresas intenta explicar su producto con texto, PDFs o reuniones eternas.</p>
+                <p><span class="highlight">El problema no es el producto.<br>Es cómo lo explican.</span></p>
+                <p><span class="emphasis">Nosotros agarramos eso complejo… y lo convertimos en algo que se entiende rápido.</span></p>
+            </div>
         </div>
-
         <div class="services-grid">
-
             <div class="service-card reveal">
-                <div class="service-icon">
-                    <img src="imagen1.png" alt="Motion Graphics 2D">
-                </div>
-                <h3>Motion Graphics 2D</h3>
-                <p>
-                    Animaciones fluidas y dinámicas en motion graphics 2D que transforman información compleja en contenido visual atractivo y fácil de comprender.
-                </p>
+                <div class="service-icon"><img src="imagen1.png" alt="Motion Graphics 2D"></div>
+                <h3>Explicamos productos complejos</h3>
+                <p>Para SaaS, apps, plataformas, contenido social</p>
                 <span class="service-tag">Motion Graphic</span>
             </div>
-
             <div class="service-card reveal">
-                <div class="service-icon">
-                    <img src="imagen2.png" alt="Whiteboard Animation">
-                </div>
-                <h3>Whiteboard Animation</h3>
-                <p>
-                    Videos de whiteboard animation que explican tu producto o servicio de manera clara y entretenida, ideales para capacitaciones y marketing.
-                </p>
+                <div class="service-icon"><img src="imagen2.png" alt="Whiteboard Animation"></div>
+                <h3>Simplificamos procesos y capacitaciones</h3>
+                <p>Para equipos internos</p>
                 <span class="service-tag">Animación</span>
             </div>
-
             <div class="service-card reveal">
-                <div class="service-icon">
-                    <img src="imagen3.png" alt="Video Explicativo Animado">
-                </div>
-                <h3>Video Explicativo Animado</h3>
-                <p>
-                    Producimos cada video explicativo animado con narrativa estratégica para que tu audiencia entienda tu mensaje en segundos.
-                </p>
+                <div class="service-icon"><img src="imagen3.png" alt="Video Explicativo Animado"></div>
+                <h3>Mejoramos tu conversión</h3>
+                <p>Para landing pages y ads</p>
                 <span class="service-tag">Video</span>
             </div>
-
             <div class="service-card reveal">
-                <div class="service-icon">
-                    <img src="imagen4.png" alt="Ilustración Creativa">
-                </div>
-                <h3>Ilustración Creativa</h3>
-                <p>
-                    Nuestro equipo de ilustradores gráficos crea piezas de ilustración creativa únicas que refuerzan la identidad visual de tu marca.
-                </p>
+                <div class="service-icon"><img src="imagen4.png" alt="Ilustración Creativa"></div>
+                <h3>Claridad del mensaje</h3>
                 <span class="service-tag">Ilustración</span>
             </div>
-
             <div class="service-card reveal">
-                <div class="service-icon">
-                    <img src="imagen5.png" alt="Motion Graphics en After Effects">
-                </div>
-                <h3>Motion Graphics en After Effects</h3>
-                <p>
-                    Dominamos motion graphics en After Effects para crear animaciones de alta calidad con efectos visuales que impactan y generan recordación.
-                </p>
+                <div class="service-icon"><img src="imagen5.png" alt="Motion Graphics en After Effects"></div>
+                <h3>Guión estratégico</h3>
                 <span class="service-tag">After Effects</span>
             </div>
-
             <div class="service-card reveal">
-                <div class="service-icon">
-                    <img src="imagen6.png" alt="Diseño Ilustración & Motion Design">
-                </div>
-                <h3>Diseño Ilustración & Motion Design</h3>
-                <p>
-                    Combinamos diseño ilustración con motion design para entregar piezas visuales completas, desde Photoshop e Ilustrador hasta la animación final.
-                </p>
+                <div class="service-icon"><img src="imagen6.png" alt="Diseño Ilustración & Motion Design"></div>
+                <h3>Explicación visual Animación</h3>
                 <span class="service-tag">Diseño</span>
             </div>
-
         </div>
     </section>
 
-    <!-- Portafolio -->
+    <!-- ============ PORTFOLIO ============ -->
     <section class="section showreel" id="portafolio">
         <div class="showreel-header reveal">
             <div class="section-label">Portafolio</div>
-            <h2 class="section-title">El poder del <span class="gradient-text">Motion Graphic</span> en acción</h2>
-            <p class="section-desc">Con motion graphics puedes transformar cualquier idea en una experiencia visual dinámica e inolvidable.</p>
+            <h2 class="section-title">Si tu producto es bueno, pero nadie lo entiende… <span class="gradient-text">mira esto</span></h2>
         </div>
-
         <div class="portfolio-showcase reveal">
             <div class="portfolio-text">
-                <h3>¿Qué puedes construir con Motion Graphics?</h3>
-                <p>Desde <strong>videos explicativos animados</strong> que simplifican conceptos complejos, hasta <strong>whiteboard animations</strong> que cuentan historias de forma única. Con motion graphics 2D puedes crear comerciales, presentaciones corporativas, contenido para redes sociales, infografías animadas, intros de YouTube, animaciones de logo y mucho más.</p>
-                <p>Nuestro equipo de <strong>ilustradores gráficos</strong> y animadores domina herramientas como <strong>After Effects, Photoshop e Ilustrador</strong> para dar vida a cada frame con <strong>ilustración creativa</strong> de alto impacto y <strong>motion design</strong> que conecta con tu audiencia.</p>
+                <h3>Ejemplo real de cómo explicamos un proceso</h3>
+                <p>Si alguna vez has tenido que explicar tu producto varias veces…probablemente no es el producto, es cómo lo estás comunicando.</p>
                 <a href="https://wa.me/573134811797?text=Hola%203frames%2C%20quiero%20ver%20más%20de%20su%20portafolio" target="_blank" class="btn-primary magnetic" style="margin-top: 1.5rem;" onclick="gtag('event', 'conversion', {'send_to': 'AW-17977375107/A_woCMmXif8bEIPzo_xC'});"><span>📂 Solicitar Portafolio Completo</span></a>
             </div>
-            <div class="portfolio-image">
-                <img src="imagen1.jpg" alt="Motion graphic - Video explicativo animado, whiteboard animation y motion design por 3frames">
+            <div class="portfolio-video" id="videoContainer">
+                <video id="portfolioVideo" preload="metadata" playsinline>
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+                <div class="video-play-overlay" id="videoOverlay">
+                    <div class="video-play-btn">
+                        <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                    </div>
+                    <span class="video-play-label">▶ Ver ejemplo</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Process -->
+    <!-- ============ PROCESS (5 STEPS) ============ -->
     <section class="section process" id="proceso">
         <div class="process-header reveal">
             <div class="section-label">Nuestro Proceso</div>
-            <h2 class="section-title">De la idea al <span class="gradient-text">motion graphic</span> final</h2>
+            <h2 class="section-title">Ejemplo real de cómo <span class="gradient-text">explicamos un proceso</span></h2>
             <p class="section-desc">Un proceso probado que garantiza resultados extraordinarios en cada video explicativo animado que producimos.</p>
         </div>
         <div class="process-timeline">
             <div class="process-step">
                 <div class="step-marker">01</div>
                 <div class="step-content">
-                    <h3>Briefing & Estrategia</h3>
-                    <p>Analizamos tus objetivos, público y mensaje clave. Definimos el estilo de motion design, la narrativa y el tono visual que mejor conecte con tu audiencia.</p>
+                    <h3>Entendemos tu negocio</h3>
+                    <p>Antes de animar cualquier cosa, entendemos qué vendes, a quién y qué necesitas que pase.</p>
+                    <div class="step-goal">Qué queremos lograr: que tu cliente entienda y actúe.</div>
                 </div>
             </div>
             <div class="process-step">
                 <div class="step-marker">02</div>
                 <div class="step-content">
-                    <h3>Guion & Storyboard</h3>
-                    <p>Nuestro equipo de ilustradores gráficos y creativos diseña cada escena. Cada frame de ilustración creativa se planifica para máximo impacto visual.</p>
+                    <h3>Bajamos la idea a algo simple</h3>
+                    <p>Tomamos tu producto o proceso y lo convertimos en una historia fácil de seguir. Nada técnico. Nada enredado. Solo claridad.</p>
                 </div>
             </div>
             <div class="process-step">
                 <div class="step-marker">03</div>
                 <div class="step-content">
-                    <h3>Diseño & Ilustración</h3>
-                    <p>Creamos los assets visuales en Photoshop e Ilustrador con diseño ilustración profesional, asegurando coherencia de marca y calidad premium.</p>
+                    <h3>Te mostramos cómo se verá</h3>
+                    <p>Creamos una versión visual del video antes de animar, para que veas exactamente qué vas a obtener. Ajustamos aquí, no después.</p>
                 </div>
             </div>
             <div class="process-step">
                 <div class="step-marker">04</div>
                 <div class="step-content">
-                    <h3>Animación & Entrega</h3>
-                    <p>Damos vida a todo con motion graphics en After Effects. Animamos en motion graphics 2D o whiteboard animation según tu proyecto, con revisiones ilimitadas.</p>
+                    <h3>Damos vida al video</h3>
+                    <p>Animamos, ponemos voz, ritmo y todo lo necesario para que se entienda y se vea profesional. Aquí es donde todo cobra sentido.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-marker">05</div>
+                <div class="step-content">
+                    <h3>Ajustamos y entregamos</h3>
+                    <p>Revisamos contigo, hacemos cambios y dejamos el video listo para usar donde lo necesites. Sin fricción. Sin complicaciones.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
+    <!-- ============ CTA ============ -->
     <section class="cta-section" id="contacto">
         <div class="cta-content reveal">
             <div class="section-label">¿Listo para empezar?</div>
             <h2 class="cta-title">Hagamos algo <span class="gradient-text">increíble</span> juntos</h2>
-            <p class="cta-desc">Cuéntanos sobre tu proyecto y recibe una propuesta personalizada de nuestra agencia motion graphic en menos de 24 horas.</p>
+            <p class="cta-desc">Si tu producto es bueno pero la gente no lo entiende, te ayudo a explicarlo mejor.</p>
             <a href="https://wa.me/573134811797?text=Hola%203frames%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" class="btn-primary magnetic" style="font-size:1.15rem; padding: 1.1rem 3rem;" onclick="gtag('event', 'conversion', {'send_to': 'AW-17977375107/A_woCMmXif8bEIPzo_xC'});">
-                <span>💬 Cotizar por WhatsApp</span>
+                <span>Cotizar por WhatsApp</span>
             </a>
         </div>
     </section>
@@ -1328,6 +1092,7 @@
                 <ul>
                     <li><a href="https://wa.me/573134811797" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17977375107/A_woCMmXif8bEIPzo_xC'});">+57 313 481 1797</a></li>
                     <li><a href="https://wa.me/573134811797" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17977375107/A_woCMmXif8bEIPzo_xC'});">WhatsApp Directo</a></li>
+
                     <li><a href="#">Medellín, Colombia</a></li>
                 </ul>
             </div>
@@ -1343,7 +1108,7 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
+    <!-- WhatsApp Float -->
     <a href="https://wa.me/573134811797?text=Hola%203frames%2C%20estoy%20interesado%20en%20sus%20servicios%20de%20motion%20graphic" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp" onclick="gtag('event', 'conversion', {'send_to': 'AW-17977375107/A_woCMmXif8bEIPzo_xC'});">
         <span class="wa-tooltip">¡Escríbenos ahora!</span>
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1354,154 +1119,103 @@
         const dot = document.getElementById('cursorDot');
         const ring = document.getElementById('cursorRing');
         let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
-
         document.addEventListener('mousemove', e => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            dot.style.left = mouseX + 'px';
-            dot.style.top = mouseY + 'px';
+            mouseX = e.clientX; mouseY = e.clientY;
+            dot.style.left = mouseX + 'px'; dot.style.top = mouseY + 'px';
         });
-
         function animateRing() {
-            ringX += (mouseX - ringX) * 0.15;
-            ringY += (mouseY - ringY) * 0.15;
-            ring.style.left = ringX + 'px';
-            ring.style.top = ringY + 'px';
+            ringX += (mouseX - ringX) * 0.15; ringY += (mouseY - ringY) * 0.15;
+            ring.style.left = ringX + 'px'; ring.style.top = ringY + 'px';
             requestAnimationFrame(animateRing);
         }
         animateRing();
-
-        document.querySelectorAll('a, button, .service-card, .reel-container, .magnetic').forEach(el => {
+        document.querySelectorAll('a, button, .service-card, .portfolio-video, .magnetic').forEach(el => {
             el.addEventListener('mouseenter', () => ring.classList.add('hover'));
             el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
         });
+
+        // ===== VIDEO PLAY =====
+        const video = document.getElementById('portfolioVideo');
+        const overlay = document.getElementById('videoOverlay');
+        const videoContainer = document.getElementById('videoContainer');
+        videoContainer.addEventListener('click', function() {
+            if (video.paused) {
+                video.volume = 1.0;
+                video.muted = false;
+                video.play();
+                overlay.classList.add('hidden');
+            } else {
+                video.pause();
+                overlay.classList.remove('hidden');
+            }
+        });
+        video.addEventListener('ended', function() { overlay.classList.remove('hidden'); });
 
         // ===== PARTICLES =====
         const canvas = document.getElementById('particles');
         const ctx = canvas.getContext('2d');
         let particles = [];
         const colors = ['#FF2D78', '#00E5FF', '#C6FF00', '#7C4DFF', '#FF6D00', '#FFD600'];
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
+        function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
-
         class Particle {
-            constructor() {
-                this.reset();
-            }
+            constructor() { this.reset(); }
             reset() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
+                this.x = Math.random() * canvas.width; this.y = Math.random() * canvas.height;
                 this.size = Math.random() * 3 + 0.5;
-                this.speedX = (Math.random() - 0.5) * 0.5;
-                this.speedY = (Math.random() - 0.5) * 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.5; this.speedY = (Math.random() - 0.5) * 0.5;
                 this.color = colors[Math.floor(Math.random() * colors.length)];
                 this.opacity = Math.random() * 0.5 + 0.1;
             }
             update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-                if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
-                    this.reset();
-                }
+                this.x += this.speedX; this.y += this.speedY;
+                if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
             }
             draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = this.color;
-                ctx.globalAlpha = this.opacity;
-                ctx.fill();
-                ctx.globalAlpha = 1;
+                ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color; ctx.globalAlpha = this.opacity; ctx.fill(); ctx.globalAlpha = 1;
             }
         }
-
         for (let i = 0; i < 80; i++) particles.push(new Particle());
-
         function drawLines() {
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
+                    const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
                     const dist = Math.sqrt(dx * dx + dy * dy);
                     if (dist < 120) {
-                        ctx.beginPath();
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.strokeStyle = particles[i].color;
-                        ctx.globalAlpha = 0.06 * (1 - dist / 120);
-                        ctx.lineWidth = 0.5;
-                        ctx.stroke();
-                        ctx.globalAlpha = 1;
+                        ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = particles[i].color; ctx.globalAlpha = 0.06 * (1 - dist / 120);
+                        ctx.lineWidth = 0.5; ctx.stroke(); ctx.globalAlpha = 1;
                     }
                 }
             }
         }
-
         function animateParticles() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => { p.update(); p.draw(); });
-            drawLines();
+            particles.forEach(p => { p.update(); p.draw(); }); drawLines();
             requestAnimationFrame(animateParticles);
         }
         animateParticles();
 
-        // ===== NAVBAR SCROLL =====
+        // ===== NAVBAR =====
         const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 50);
-        });
+        window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
 
         // ===== MOBILE MENU =====
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('open');
-        }
+        function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
         document.querySelectorAll('.nav-links a').forEach(a => {
-            a.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('open');
-            });
+            a.addEventListener('click', () => { document.getElementById('navLinks').classList.remove('open'); });
         });
 
         // ===== SCROLL REVEAL =====
         const revealElements = document.querySelectorAll('.reveal, .process-step');
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry, i) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, i * 100);
-                }
+                if (entry.isIntersecting) { setTimeout(() => { entry.target.classList.add('visible'); }, i * 100); }
             });
         }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
-
         revealElements.forEach(el => revealObserver.observe(el));
-
-        // ===== COUNTER ANIMATION =====
-        const counters = document.querySelectorAll('.stat-number[data-target]');
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const el = entry.target;
-                    const target = parseInt(el.dataset.target);
-                    let current = 0;
-                    const increment = target / 60;
-                    const timer = setInterval(() => {
-                        current += increment;
-                        if (current >= target) {
-                            el.textContent = target + '+';
-                            clearInterval(timer);
-                        } else {
-                            el.textContent = Math.floor(current) + '+';
-                        }
-                    }, 25);
-                    counterObserver.unobserve(el);
-                }
-            });
-        }, { threshold: 0.5 });
-        counters.forEach(c => counterObserver.observe(c));
 
         // ===== MAGNETIC BUTTONS =====
         document.querySelectorAll('.magnetic').forEach(btn => {
@@ -1511,34 +1225,18 @@
                 const y = e.clientY - rect.top - rect.height / 2;
                 btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
             });
-            btn.addEventListener('mouseleave', () => {
-                btn.style.transform = 'translate(0, 0)';
-            });
+            btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0, 0)'; });
         });
 
-        // ===== PARALLAX FLOATING IMAGES =====
-        document.addEventListener('mousemove', e => {
-            const mx = (e.clientX / window.innerWidth - 0.5) * 2;
-            const my = (e.clientY / window.innerHeight - 0.5) * 2;
-            document.querySelectorAll('.floating-img').forEach((img, i) => {
-                const speed = (i + 1) * 8;
-                img.style.transform = `translate(${mx * speed}px, ${my * speed}px)`;
-            });
-        });
-
-        // ===== TILT EFFECT ON SERVICE CARDS =====
+        // ===== TILT CARDS =====
         document.querySelectorAll('.service-card').forEach(card => {
             card.addEventListener('mousemove', e => {
                 const rect = card.getBoundingClientRect();
                 const x = (e.clientX - rect.left) / rect.width;
                 const y = (e.clientY - rect.top) / rect.height;
-                const rotateX = (y - 0.5) * -10;
-                const rotateY = (x - 0.5) * 10;
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+                card.style.transform = `perspective(1000px) rotateX(${(y - 0.5) * -10}deg) rotateY(${(x - 0.5) * 10}deg) translateY(-8px)`;
             });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-            });
+            card.addEventListener('mouseleave', () => { card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)'; });
         });
 
         // ===== SMOOTH SCROLL =====
@@ -1546,26 +1244,16 @@
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
-        // ===== TEXT TYPING EFFECT ON HERO BADGE =====
-        const badge = document.querySelector('.hero-badge');
-        if (badge) {
-            const originalText = badge.innerHTML;
-            badge.style.overflow = 'hidden';
-        }
-
-        // ===== SCROLL PROGRESS BAR =====
+        // ===== PROGRESS BAR =====
         const progressBar = document.createElement('div');
         progressBar.style.cssText = 'position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#FF2D78,#00E5FF,#C6FF00);z-index:10000;transition:width 0.1s;width:0;';
         document.body.appendChild(progressBar);
         window.addEventListener('scroll', () => {
-            const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-            progressBar.style.width = scrolled + '%';
+            progressBar.style.width = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100 + '%';
         });
     </script>
 </body>
