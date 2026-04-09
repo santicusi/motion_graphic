@@ -368,10 +368,12 @@
         }
         .section-title {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            font-weight: 800;
-            line-height: 1.15;
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            font-weight: 300;
+            line-height: 1.05;
             margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s 0.4s forwards;
         }
         .section-desc {
             font-size: 1.1rem;
@@ -724,9 +726,12 @@
         .cta-content { position: relative; z-index: 2; }
         .cta-title {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(2rem, 4.5vw, 3.5rem);
-            font-weight: 800;
-            margin-bottom: 1.2rem;
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            font-weight: 700;
+            line-height: 1.05;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s 0.4s forwards;
         }
         .cta-desc {
             font-size: 1.15rem;
@@ -875,7 +880,6 @@
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#portafolio">Portafolio</a></li>
             <li><a href="#proceso">Proceso</a></li>
-            <li><a href="#testimonios">Clientes</a></li>
             <li><a href="https://wa.me/573134811797?text=Hola%203frames%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" class="nav-cta magnetic" onclick="gtag('event', 'conversion', {'send_to': 'AW-17977375107/A_woCMmXif8bEIPzo_xC'});">Cotizar Proyecto</a></li>
         </ul>
         <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
@@ -896,8 +900,8 @@
                 Agencia Motion Graphic #1 en Creatividad
             </div>
             <h1>
-                Videos explicativos que convierten ideas complejas en <br>
-                <span class="gradient-text">mensajes claros y fáciles de entender</span>
+                Convertimos ideas complejas <br>
+                <span class="gradient-text">en mensajes claros</span>
             </h1>
             <div class="hero-subtitle">Explicamos productos, procesos y servicios de forma visual para que tu mensaje se entienda rápido y genere mejores resultados.</div>
             <div class="hero-buttons">
@@ -916,16 +920,14 @@
             <div class="ticker-item">MOTION DESIGN <span class="sep"></span></div>
             <div class="ticker-item">ILUSTRACIÓN CREATIVA <span class="sep"></span></div>
             <div class="ticker-item">MOTION GRAPHICS EN AFTER EFFECTS <span class="sep"></span></div>
-            <div class="ticker-item">DISEÑO ILUSTRACIÓN <span class="sep"></span></div>
-            <div class="ticker-item">ILUSTRADOR GRÁFICO <span class="sep"></span></div>
+            <div class="ticker-item">DISEÑO E ILUSTRACIÓN <span class="sep"></span></div>
             <div class="ticker-item">WHITEBOARD ANIMATION <span class="sep"></span></div>
             <div class="ticker-item">VIDEO EXPLICATIVO ANIMADO <span class="sep"></span></div>
             <div class="ticker-item">MOTION GRAPHICS 2D <span class="sep"></span></div>
             <div class="ticker-item">MOTION DESIGN <span class="sep"></span></div>
             <div class="ticker-item">ILUSTRACIÓN CREATIVA <span class="sep"></span></div>
             <div class="ticker-item">MOTION GRAPHICS EN AFTER EFFECTS <span class="sep"></span></div>
-            <div class="ticker-item">DISEÑO ILUSTRACIÓN <span class="sep"></span></div>
-            <div class="ticker-item">ILUSTRADOR GRÁFICO <span class="sep"></span></div>
+            <div class="ticker-item">DISEÑO E ILUSTRACIÓN <span class="sep"></span></div>
         </div>
     </div>
 
@@ -933,7 +935,7 @@
     <section class="section services" id="servicios">
         <div class="services-header reveal">
             <div class="section-label">Nuestros Servicios</div>
-            <h2 class="section-title">Si tu cliente no entiende en segundos… <span class="gradient-text">no compra.</span></h2>
+            <h2 class="section-title">Si tu cliente <br> no entiende en segundos… <span class="gradient-text"> <br> no compra.</span></h2>
             <div class="problem-right">
                 <p>La mayoría de empresas intenta explicar su producto con texto, PDFs o reuniones eternas.</p>
                 <p><span class="highlight">El problema no es el producto.<br>Es cómo lo explican.</span></p>
@@ -958,21 +960,6 @@
                 <h3>Mejoramos tu conversión</h3>
                 <p>Para landing pages y ads</p>
                 <span class="service-tag">Video</span>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-icon"><img src="imagen4.png" alt="Ilustración Creativa"></div>
-                <h3>Claridad del mensaje</h3>
-                <span class="service-tag">Ilustración</span>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-icon"><img src="imagen5.png" alt="Motion Graphics en After Effects"></div>
-                <h3>Guión estratégico</h3>
-                <span class="service-tag">After Effects</span>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-icon"><img src="imagen6.png" alt="Diseño Ilustración & Motion Design"></div>
-                <h3>Explicación visual Animación</h3>
-                <span class="service-tag">Diseño</span>
             </div>
         </div>
     </section>
@@ -1007,7 +994,7 @@
     <section class="section process" id="proceso">
         <div class="process-header reveal">
             <div class="section-label">Nuestro Proceso</div>
-            <h2 class="section-title">Ejemplo real de cómo <span class="gradient-text">explicamos un proceso</span></h2>
+            <h2 class="section-title">De la idea al  <span class="gradient-text">video final</span></h2>
             <p class="section-desc">Un proceso probado que garantiza resultados extraordinarios en cada video explicativo animado que producimos.</p>
         </div>
         <div class="process-timeline">
@@ -1093,7 +1080,7 @@
                     <li><a href="https://wa.me/573134811797" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17977375107/A_woCMmXif8bEIPzo_xC'});">+57 313 481 1797</a></li>
                     <li><a href="https://wa.me/573134811797" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17977375107/A_woCMmXif8bEIPzo_xC'});">WhatsApp Directo</a></li>
 
-                    <li><a href="#">Medellín, Colombia</a></li>
+                    <li><a href="#">Bogotá, Colombia</a></li>
                 </ul>
             </div>
         </div>
